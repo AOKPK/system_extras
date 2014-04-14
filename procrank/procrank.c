@@ -315,14 +315,14 @@ int main(int argc, char *argv[]) {
     printf("%5s  ", "");
     if (ws) {
         printf("%7s  %6ldK  %6ldK  ",
-            "", total_pss / 1024, total_uss / 1024);
+            "", (long int)total_pss / 1024, (long int)total_uss / 1024);
     } else {
         printf("%8s  %7s  %6ldK  %6ldK  ",
-            "", "", total_pss / 1024, total_uss / 1024);
+            "", "", (long int)total_pss / 1024, (long int)total_uss / 1024);
     }
 
     if (has_swap) {
-        printf("%6ldK  ", total_swap);
+        printf("%6ldK  ", (long int)total_swap);
     }
 
     printf("TOTAL\n");
